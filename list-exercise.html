@@ -10,28 +10,13 @@
 		}
 	</style>
 </head>
-<body ng-controller = "listController">
+<body>
 	<h3>My Favorite Animals</h3>
-	<ul ng-repeat = "animal in animals">
-		<li>{{animal}}</li>
+	<ul>
+		<li></li>
 	</ul>
 </body>
 <script type="text/javascript">
 	var app = angular.module('myList', []);
-
-	app.controller('listController', function($scope){
-		//add type and sound to animal array:
-		$scope.animals = [
-			'Zebra',
-			'Tigers',
-			'Dogs',
-			'Cats',
-			'Monkeys',
-			'Lions',
-			'Eagles',
-			'Fish'
-		];
-	});
-
 </script>
 </html>

@@ -13,7 +13,7 @@
 <body ng-controller = "listController">
 	<h3>My Favorite Animals</h3>
 	<ul ng-repeat = "animal in animals">
-		<li>{{animal}}</li>
+		<li>{{animal.type}} - {{animal.sound}}</li>
 	</ul>
 </body>
 <script type="text/javascript">
@@ -22,14 +22,22 @@
 	app.controller('listController', function($scope){
 		//add type and sound to animal array:
 		$scope.animals = [
-			'Zebra',
-			'Tigers',
-			'Dogs',
-			'Cats',
-			'Monkeys',
-			'Lions',
-			'Eagles',
-			'Fish'
+			{
+				type 	: 'Lion',
+				sound	: 'roar'
+			},
+			{
+				type 	: 'Dog',
+				sound 	: 'bark'
+			},
+			{
+				type 	: 'Cat',
+				sound 	: 'meow'
+			},
+			{
+				type 	: 'Chicken',
+				sound 	: 'cluck'
+			}
 		];
 	});
 
