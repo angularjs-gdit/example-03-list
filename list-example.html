@@ -1,0 +1,33 @@
+<!Doctype html>
+<html ng-app = "myList">
+<head>
+	<title>List</title>
+	<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+			padding: 5%;
+		}
+	</style>
+</head>
+<body ng-controller = "listController">
+	<h3>My Favorite Animals</h3>
+	<ul ng-repeat = "animal in animals">
+		<li>{{animal.type}} {{animal.sound}}</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var app = angular.module('myList', []);
+
+	app.controller('listController', function($scope){
+		$scope.animals = [
+			'Dogs',
+			'Cats',
+			'Sharks',
+			'Tigers',
+			'Llamas'
+		];
+	});
+
+</script>
+</html>
